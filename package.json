@@ -1,7 +1,7 @@
 {
   "name": "lostmyphone",
   "version": "0.1.0",
-  "homepage": "https://lostmyphone.github.io",
+  "homepage": "https://vishnukt.github.io/lostmyphone",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
