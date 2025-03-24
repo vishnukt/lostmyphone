@@ -31,6 +31,7 @@
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .coming-soon-container {
@@ -66,10 +67,16 @@
   background-color: #f8f9fa;
   border-radius: 8px;
   transition: transform 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  touch-action: manipulation;
 }
 
 .feature:hover {
   transform: translateY(-5px);
+}
+
+.feature:active {
+  transform: translateY(0);
 }
 
 .feature h3 {
@@ -90,7 +97,35 @@
   margin-top: auto;
 }
 
+.mobile-cta {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f0f9ff;
+  border-radius: 8px;
+  border-left: 4px solid #61dafb;
+  text-align: left;
+  display: none;
+}
+
+.mobile-cta p {
+  margin: 0;
+  color: #0066cc;
+  font-weight: 500;
+}
+
+.mobile-note {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-top: 0.5rem;
+  display: none;
+}
+
+/* Mobile-friendly styles */
 @media (max-width: 768px) {
+  .App-header {
+    padding: 1.5rem 1rem;
+  }
+  
   .App-header h1 {
     font-size: 2rem;
   }
@@ -99,12 +134,63 @@
     font-size: 1rem;
   }
   
-  .coming-soon-container {
+  .App-main {
     padding: 1rem;
-    margin: 1rem;
+  }
+  
+  .coming-soon-container {
+    padding: 1.5rem 1rem;
+    margin: 1rem 0;
+  }
+  
+  .coming-soon-container h2 {
+    font-size: 1.8rem;
+  }
+  
+  .coming-soon-container p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
   }
   
   .features {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .feature {
+    padding: 1.2rem;
+  }
+  
+  .mobile-cta,
+  .mobile-note {
+    display: block;
+  }
+  
+  .feature {
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+  }
+  
+  .feature:active {
+    background-color: #f0f0f0;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .App-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .tagline {
+    font-size: 0.9rem;
+  }
+  
+  .coming-soon-container h2 {
+    font-size: 1.5rem;
+  }
+  
+  .feature h3 {
+    font-size: 1.2rem;
   }
 }
