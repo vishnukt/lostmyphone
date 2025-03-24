@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.16aeb73e.css",
-    "main.js": "/static/js/main.0e6e67ef.js",
-    "static/js/453.9160c611.chunk.js": "/static/js/453.9160c611.chunk.js",
-    "index.html": "/index.html",
-    "main.16aeb73e.css.map": "/static/css/main.16aeb73e.css.map",
-    "main.0e6e67ef.js.map": "/static/js/main.0e6e67ef.js.map",
-    "453.9160c611.chunk.js.map": "/static/js/453.9160c611.chunk.js.map"
+    "main.css": "/lostmyphone/static/css/main.16aeb73e.css",
+    "main.js": "/lostmyphone/static/js/main.290b0490.js",
+    "static/js/453.9160c611.chunk.js": "/lostmyphone/static/js/453.9160c611.chunk.js",
+    "index.html": "/lostmyphone/index.html",
+    "main.16aeb73e.css.map": "/lostmyphone/static/css/main.16aeb73e.css.map",
+    "main.290b0490.js.map": "/lostmyphone/static/js/main.290b0490.js.map",
+    "453.9160c611.chunk.js.map": "/lostmyphone/static/js/453.9160c611.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.16aeb73e.css",
-    "static/js/main.0e6e67ef.js"
+    "static/js/main.290b0490.js"
   ]
 }
