@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/lostmyphone/static/css/main.4efb37a3.css",
-    "main.js": "/lostmyphone/static/js/main.c8918e5f.js",
+    "main.js": "/lostmyphone/static/js/main.76cf07de.js",
     "static/js/206.dddf6065.chunk.js": "/lostmyphone/static/js/206.dddf6065.chunk.js",
     "index.html": "/lostmyphone/index.html"
   },
   "entrypoints": [
     "static/css/main.4efb37a3.css",
-    "static/js/main.c8918e5f.js"
+    "static/js/main.76cf07de.js"
   ]
 }
