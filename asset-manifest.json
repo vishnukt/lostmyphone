@@ -1,15 +1,12 @@
 {
   "files": {
-    "main.css": "/lostmyphone/static/css/main.509aeb14.css",
-    "main.js": "/lostmyphone/static/js/main.60ad7f17.js",
-    "static/js/453.9160c611.chunk.js": "/lostmyphone/static/js/453.9160c611.chunk.js",
-    "index.html": "/lostmyphone/index.html",
-    "main.509aeb14.css.map": "/lostmyphone/static/css/main.509aeb14.css.map",
-    "main.60ad7f17.js.map": "/lostmyphone/static/js/main.60ad7f17.js.map",
-    "453.9160c611.chunk.js.map": "/lostmyphone/static/js/453.9160c611.chunk.js.map"
+    "main.css": "/lostmyphone/static/css/main.4efb37a3.css",
+    "main.js": "/lostmyphone/static/js/main.99d014a6.js",
+    "static/js/206.dddf6065.chunk.js": "/lostmyphone/static/js/206.dddf6065.chunk.js",
+    "index.html": "/lostmyphone/index.html"
   },
   "entrypoints": [
-    "static/css/main.509aeb14.css",
-    "static/js/main.60ad7f17.js"
+    "static/css/main.4efb37a3.css",
+    "static/js/main.99d014a6.js"
   ]
 }
