@@ -1,0 +1,34 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#3182CE"/>
+  
+  <!-- Gradient overlay -->
+  <rect width="1200" height="630" fill="url(#paint0_linear)"/>
+  
+  <!-- Phone icon -->
+  <g transform="translate(260, 170) scale(2.2)">
+    <path d="M130 0C110 0 100 10 100 30V270C100 290 110 300 130 300H170C190 300 200 290 200 270V30C200 10 190 0 170 0H130ZM150 290C140 290 132 282 132 272C132 262 140 254 150 254C160 254 168 262 168 272C168 282 160 290 150 290ZM190 240H110V40H190V240Z" fill="white"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="600" y="220" font-family="Arial, sans-serif" font-size="72" font-weight="bold" text-anchor="middle" fill="white">LostMyPhone</text>
+  
+  <!-- Tagline -->
+  <text x="600" y="320" font-family="Arial, sans-serif" font-size="36" font-weight="normal" text-anchor="middle" fill="white">Never lose your important contacts again</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="900" cy="170" r="40" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="300" cy="460" r="60" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="800" cy="500" r="80" fill="rgba(255,255,255,0.15)"/>
+  
+  <!-- URL -->
+  <text x="600" y="560" font-family="Arial, sans-serif" font-size="32" font-weight="normal" text-anchor="middle" fill="white">lostmyphone.com</text>
+  
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4299E1" stop-opacity="0"/>
+      <stop offset="1" stop-color="#2B6CB0" stop-opacity="0.7"/>
+    </linearGradient>
+  </defs>
+</svg> 

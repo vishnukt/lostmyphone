@@ -7,10 +7,35 @@
     <meta name="theme-color" content="#282c34" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://*.lostmyphone.com https://api.lostmyphone.com http://localhost:* https://*; font-src 'self' data:; frame-src 'none'; object-src 'none';" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    
+    <!-- Primary Meta Tags -->
     <meta
       name="description"
-      content="LostMyPhone - Never lose your important contacts again. Access your emergency contacts when you need them most."
+      content="LostMyPhone - Never lose your important contacts again. Access your emergency contacts when you need them most, even when your phone is lost, damaged, or unavailable."
     />
+    <meta name="keywords" content="emergency contacts, lost phone, contact backup, phone emergency, contact storage, accessibility" />
+    <meta name="author" content="LostMyPhone Team" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="%PUBLIC_URL%" />
+    <meta property="og:title" content="LostMyPhone - Emergency Contact Access" />
+    <meta property="og:description" content="Never lose your important contacts again. Access your emergency contacts when you need them most, even when your phone is lost, damaged, or unavailable." />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="%PUBLIC_URL%" />
+    <meta property="twitter:title" content="LostMyPhone - Emergency Contact Access" />
+    <meta property="twitter:description" content="Never lose your important contacts again. Access your emergency contacts when you need them most, even when your phone is lost, damaged, or unavailable." />
+    <meta property="twitter:image" content="%PUBLIC_URL%/og-image.png" />
+    
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
