@@ -370,11 +370,16 @@ const Contacts = () => {
         canonicalUrl="/contacts"
       />
       
-      <Container maxW="container.md" py={6}>
+      <Container maxW="container.md" py={6} px={{ base: 3, md: 6 }}>
         <VStack spacing={6} align="stretch">
-          <Flex justifyContent="space-between" alignItems="center">
+          <Flex 
+            justifyContent="space-between" 
+            alignItems="center"
+            direction={{ base: "column", sm: "row" }}
+            gap={3}
+          >
             <Box>
-              <Heading as="h1" size="xl">
+              <Heading as="h1" size={{ base: "lg", md: "xl" }}>
                 Emergency Contacts
               </Heading>
               {user && (
@@ -388,13 +393,20 @@ const Contacts = () => {
               colorScheme="red" 
               variant="outline"
               onClick={handleLogout}
+              size={{ base: "sm", md: "md" }}
             >
               Logout
             </Button>
           </Flex>
 
-          <Box bg="white" p={6} borderRadius="lg" boxShadow="md">
-            <Flex justifyContent="space-between" alignItems="center" mb={4}>
+          <Box bg="white" p={{ base: 3, md: 6 }} borderRadius="lg" boxShadow="md">
+            <Flex 
+              justifyContent="space-between" 
+              alignItems="center" 
+              mb={4}
+              direction={{ base: "column", sm: "row" }}
+              gap={3}
+            >
               <Heading as="h2" size="md">
                 Your Contacts
               </Heading>
@@ -403,6 +415,7 @@ const Contacts = () => {
                 colorScheme="blue"
                 onClick={onOpen}
                 isDisabled={contacts.length >= 5}
+                size={{ base: "sm", md: "md" }}
               >
                 Add Contact
               </Button>
@@ -421,62 +434,64 @@ const Contacts = () => {
                 You don't have any contacts yet. Add some emergency contacts to get started.
               </Box>
             ) : (
-              <Table variant="simple">
-                <Thead>
-                  <Tr>
-                    <Th>Name</Th>
-                    <Th>Phone Number</Th>
-                    <Th width="120px">Actions</Th>
-                  </Tr>
-                </Thead>
-                <Tbody>
-                  {contacts.map((contact) => {
-                    // Ensure we handle contact with either id or _id
-                    const contactId = contact.id || contact._id || '';
-                    
-                    return (
-                      <Tr key={contactId}>
-                        <Td>{contact.name || 'Unnamed'}</Td>
-                        <Td>{contact.phoneNumber || 'No number'}</Td>
-                        <Td>
-                          <HStack spacing={2}>
-                            <Tooltip label="Call" hasArrow>
-                              <IconButton
-                                aria-label="Call contact"
-                                icon={<FaPhoneAlt />}
-                                colorScheme="green"
-                                size="sm"
-                                onClick={() => handleCallNumber(contact.phoneNumber)}
-                              />
-                            </Tooltip>
-                            <Tooltip label="Copy number" hasArrow>
-                              <IconButton
-                                aria-label="Copy number"
-                                icon={<FaCopy />}
-                                colorScheme="blue"
-                                size="sm"
-                                onClick={() => handleCopyNumber(contact.phoneNumber)}
-                              />
-                            </Tooltip>
-                            <Tooltip label="Delete" hasArrow>
-                              <IconButton
-                                aria-label="Delete contact"
-                                icon={<FaTrash />}
-                                colorScheme="red"
-                                size="sm"
-                                onClick={() => handleDeleteContact(contactId)}
-                              />
-                            </Tooltip>
-                          </HStack>
-                        </Td>
-                      </Tr>
-                    );
-                  })}
-                </Tbody>
-              </Table>
+              <Box overflowX="auto">
+                <Table variant="simple" size={{ base: "sm", md: "md" }}>
+                  <Thead>
+                    <Tr>
+                      <Th>Name</Th>
+                      <Th>Phone Number</Th>
+                      <Th width={{ base: "110px", md: "120px" }}>Actions</Th>
+                    </Tr>
+                  </Thead>
+                  <Tbody>
+                    {contacts.map((contact) => {
+                      // Ensure we handle contact with either id or _id
+                      const contactId = contact.id || contact._id || '';
+                      
+                      return (
+                        <Tr key={contactId}>
+                          <Td maxW={{ base: "100px", md: "200px" }} isTruncated>{contact.name || 'Unnamed'}</Td>
+                          <Td maxW={{ base: "120px", md: "200px" }} isTruncated>{contact.phoneNumber || 'No number'}</Td>
+                          <Td>
+                            <HStack spacing={{ base: 1, md: 2 }}>
+                              <Tooltip label="Call" hasArrow>
+                                <IconButton
+                                  aria-label="Call contact"
+                                  icon={<FaPhoneAlt />}
+                                  colorScheme="green"
+                                  size="sm"
+                                  onClick={() => handleCallNumber(contact.phoneNumber)}
+                                />
+                              </Tooltip>
+                              <Tooltip label="Copy number" hasArrow>
+                                <IconButton
+                                  aria-label="Copy number"
+                                  icon={<FaCopy />}
+                                  colorScheme="blue"
+                                  size="sm"
+                                  onClick={() => handleCopyNumber(contact.phoneNumber)}
+                                />
+                              </Tooltip>
+                              <Tooltip label="Delete" hasArrow>
+                                <IconButton
+                                  aria-label="Delete contact"
+                                  icon={<FaTrash />}
+                                  colorScheme="red"
+                                  size="sm"
+                                  onClick={() => handleDeleteContact(contactId)}
+                                />
+                              </Tooltip>
+                            </HStack>
+                          </Td>
+                        </Tr>
+                      );
+                    })}
+                  </Tbody>
+                </Table>
+              </Box>
             )}
 
-            <HStack mt={4} justifyContent="space-between">
+            <HStack mt={4} justifyContent="space-between" flexWrap="wrap" spacing={{ base: 2, md: 4 }}>
               <Text fontSize="sm" color="gray.500">
                 {contacts.length} / 5 contacts stored
               </Text>
@@ -486,8 +501,8 @@ const Contacts = () => {
             </HStack>
           </Box>
 
-          <Box bg="blue.50" p={4} borderRadius="md">
-            <Text fontSize="sm" color="blue.700">
+          <Box bg="blue.50" p={{ base: 3, md: 4 }} borderRadius="md">
+            <Text fontSize={{ base: "xs", md: "sm" }} color="blue.700">
               <strong>Remember:</strong> In case you lose your phone, you can access these contacts
               from any device by logging in with your name, date of birth, and phone number.
             </Text>
@@ -495,9 +510,9 @@ const Contacts = () => {
         </VStack>
 
         {/* Add Contact Modal */}
-        <Modal isOpen={isOpen} onClose={onClose}>
+        <Modal isOpen={isOpen} onClose={onClose} size={{ base: "xs", sm: "md" }}>
           <ModalOverlay />
-          <ModalContent>
+          <ModalContent mx={{ base: 3, sm: 0 }}>
             <ModalHeader>Add Emergency Contact</ModalHeader>
             <ModalCloseButton />
             <Formik
@@ -527,6 +542,7 @@ const Contacts = () => {
                                 {...field}
                                 placeholder="Contact Name"
                                 type="text"
+                                size={{ base: "sm", md: "md" }}
                               />
                             </InputGroup>
                             <FormErrorMessage>{form.errors.name}</FormErrorMessage>
@@ -536,13 +552,14 @@ const Contacts = () => {
 
                       <FormControl>
                         <FormLabel>Phone Number</FormLabel>
-                        <HStack>
+                        <HStack spacing={2}>
                           <Field name="countryCode">
                             {({ field, form }) => (
                               <Select 
                                 {...field} 
-                                w="130px"
+                                w={{ base: "110px", md: "130px" }}
                                 isInvalid={form.errors.countryCode && form.touched.countryCode}
+                                size={{ base: "sm", md: "md" }}
                               >
                                 {countryCodes.map(country => (
                                   <option key={country.code} value={country.code}>
@@ -565,6 +582,7 @@ const Contacts = () => {
                                     {...field}
                                     placeholder="Phone number (digits only)"
                                     type="tel"
+                                    size={{ base: "sm", md: "md" }}
                                   />
                                 </InputGroup>
                                 <FormErrorMessage>{form.errors.phoneNumber}</FormErrorMessage>
@@ -577,13 +595,14 @@ const Contacts = () => {
                   </ModalBody>
 
                   <ModalFooter>
-                    <Button colorScheme="gray" mr={3} onClick={onClose}>
+                    <Button colorScheme="gray" mr={3} onClick={onClose} size={{ base: "sm", md: "md" }}>
                       Cancel
                     </Button>
                     <Button
                       colorScheme="blue"
                       isLoading={props.isSubmitting}
                       type="submit"
+                      size={{ base: "sm", md: "md" }}
                     >
                       Save Contact
                     </Button>

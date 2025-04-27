@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { ChakraProvider, Box } from '@chakra-ui/react';
 import { HelmetProvider } from 'react-helmet-async';
 import { AuthProvider } from './context/AuthContext';
@@ -17,7 +17,7 @@ function App() {
     <HelmetProvider>
       <ChakraProvider>
         <AuthProvider>
-          <Router basename={process.env.PUBLIC_URL}>
+          <Router>
             <Box display="flex" flexDirection="column" minH="100vh">
               <Navbar />
               <Box flex="1">

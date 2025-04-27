@@ -2,17 +2,44 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico?v=2" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon.png?v=2" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon.png?v=2" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <meta name="theme-color" content="#282c34" />
+    <meta name="theme-color" content="#0099FF" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://*.lostmyphone.com https://api.lostmyphone.com http://localhost:* https://*; font-src 'self' data:; frame-src 'none'; object-src 'none';" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://*.lostmyphone.com https://api.lostmyphone.com http://localhost:* https://*; font-src 'self' data:; frame-src 'none'; object-src 'none';" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta http-equiv="X-Frame-Options" content="DENY" />
     <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    
+    <!-- Start Single Page Apps for GitHub Pages -->
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // This script checks to see if a redirect is present in the query string,
+      // converts it back into the correct url and adds it to the
+      // browser's history using window.history.replaceState(...),
+      // which won't cause the browser to attempt to load the new url.
+      // When the single page app is loaded further down in this file,
+      // the correct url will be waiting in the browser's history for
+      // the single page app to route accordingly.
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+    <!-- End Single Page Apps for GitHub Pages -->
     
     <!-- Primary Meta Tags -->
     <meta
@@ -24,19 +51,22 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="%PUBLIC_URL%" />
+    <meta property="og:url" content="https://vishnukt.github.io/lostmyphone/" />
     <meta property="og:title" content="LostMyPhone - Emergency Contact Access" />
     <meta property="og:description" content="Never lose your important contacts again. Access your emergency contacts when you need them most, even when your phone is lost, damaged, or unavailable." />
-    <meta property="og:image" content="%PUBLIC_URL%/og-image.png" />
+    <meta property="og:image" content="https://vishnukt.github.io/lostmyphone/logo512.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:site_name" content="LostMyPhone" />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="%PUBLIC_URL%" />
-    <meta property="twitter:title" content="LostMyPhone - Emergency Contact Access" />
-    <meta property="twitter:description" content="Never lose your important contacts again. Access your emergency contacts when you need them most, even when your phone is lost, damaged, or unavailable." />
-    <meta property="twitter:image" content="%PUBLIC_URL%/og-image.png" />
+    <!-- Twitter / WhatsApp -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="https://vishnukt.github.io/lostmyphone/" />
+    <meta name="twitter:title" content="LostMyPhone - Emergency Contact Access" />
+    <meta name="twitter:description" content="Never lose your important contacts again. Access your emergency contacts when you need them most, even when your phone is lost, damaged, or unavailable." />
+    <meta name="twitter:image" content="https://vishnukt.github.io/lostmyphone/logo512.png" />
     
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png?v=2" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
